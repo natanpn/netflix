@@ -1,0 +1,294 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+body{
+	background-color: #181818;
+}
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	max-width: 1800px;
+	padding: 0 2%;
+}
+section.nav__menu{
+	background-color: black;
+	padding: 12px 0;
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+}
+.menu__mobile{
+	display: none;
+}
+.play-bg{
+	display: none;
+}
+.menu__desktop{
+	display: flex;	
+	width: 100%;
+}
+.logo {
+	display: flex;
+	align-items: center;
+	width: 50%;
+}
+.logo img{
+	margin-right: 50px;
+}
+.logo a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 18px;
+	margin: 0 10px;
+}
+.items__right{
+	display: flex;
+	justify-content: flex-end;
+	color: #fff;
+	align-items: center;
+	width: 50%;
+}
+.items__right i{
+	margin: 0 20px;
+}
+section.chamada__bg{
+	overflow-x: hidden; 
+}
+.chamada__bg .bg{
+	position: relative;
+	z-index: -10;
+	background: linear-gradient(to left, rgba(2, 198, 58, 0) 20%, rgb(0, 0, 0)), center top url(../images/vahalla.jpg);
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+}
+.chamada__bg .logo-bg__mobile {
+	display: none;
+}
+.chamada__bg .logo-bg{
+	position: absolute;
+	left: 90px;
+	top: 160px;
+	z-index: 10;
+}
+.logo-bg h1{
+	margin-top: 70px;
+	font-size: 32px;
+	color: #fff;
+}
+.logo-bg a:first-of-type{
+	text-decoration: none;
+	color: #fff;
+	font-weight: 500;
+	padding: 13px 35px;
+	background-color: #e50914;
+	margin-right: 10px;
+	border: 1px solid #757575;
+}
+.logo-bg a:last-of-type{
+	text-decoration: none;
+	color: #fff;
+	font-weight: 500;
+	padding: 13px 40px;
+	background-color: #181818;
+	border: 1px solid #757575;
+}
+.logo-bg p{
+	font-size: 18px;
+	color: #fff;
+}
+.logo-bg p:last-of-type{
+	margin-top: 20px;
+}
+.logo-bg p:first-of-type{
+	margin: 20px 0;
+	color: #a3a3a3;
+	font-size: 20px;
+}
+.logo-bg p:nth-child(4){
+	padding: 8px 0;
+}
+.logo-bg p:first-of-type span{
+	border: 1px solid #a3a3a3;
+	padding: 0 6px;
+	font-size: 16px;
+}
+section.mylist{
+	justify-content: center;
+	background-color: #181818;
+}
+.mylist h2, .releases h2, .similar h2{
+	color: #fff;
+	margin-left: 40px;
+	margin-top: 10px;
+	margin-bottom: -20px;
+}
+.box-list{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 30px;
+}
+.box-list .box{
+	width: 16.6%;
+	border: 3px solid #181818;
+	height: 170px;
+}
+.box-list .box img{
+	width: 100%;
+	height: 100%;
+}
+.content{
+	display: flex;
+	margin: 60px 0;
+}
+.content-box h3{
+	color: #757575;
+}
+.content-box p{
+	color: #757575;
+	margin: 20px 0;
+	cursor: pointer;
+}
+.content-box:nth-child(2), .content-box:nth-child(3){
+	margin: 0 60px;
+}
+.content-box:nth-child(2), .content-box:nth-child(3), .content-box:nth-child(4) {
+	margin-top: 60px;
+}
+
+@media screen and (max-width: 1250px) {
+section.nav__menu .container{
+	background: rgba(0, 0, 0, 0.50);
+}	
+section.nav__menu{
+	padding-top: 0;
+}
+.menu__desktop{
+	display: none;
+}
+.menu__mobile{
+	display: flex;
+	width: 100%;
+	padding: 2px 10px;
+}
+.chamada__bg .bg{
+	position: relative;
+	z-index: -10;
+	background: linear-gradient(to bottom, rgba(2, 198, 58, 0) 20%, rgb(0, 0, 0)), center top url(../images/vahalla.jpg);
+	background-position: center;
+	height: 600px;
+}
+.logo-mobile{
+	width: 50%;
+}
+.items-mobile__right{
+	width: 50%;
+	justify-content: end;
+	display: flex;
+	color: #fff;
+	align-items: center;
+}
+.items-mobile__right i {
+	font-size: 16px;
+	margin-right: 14px;
+	cursor: pointer;
+}
+.items-mobile__right img{
+	border-radius: 3px;
+	cursor: pointer;
+}
+section.nav__menu{
+	background-color: transparent;
+}
+section.nav__menu .container{
+	padding: 0;
+}
+.logo-bg{
+	display: none;
+}
+.chamada__bg .logo-bg__mobile{
+	display: block;
+	position: absolute;
+	z-index: 10;
+	top: 60%;
+	left: 60%;
+	transform: translate(-50%, -50%);
+}
+.box-list .box{
+	width: 33.3%;
+	border: 2px solid #181818;
+	height: 100px;
+}
+.mylist h2, .releases h2, .similar h2{
+	margin-left: 13px;
+}
+.category{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	padding: 10px 36px;
+	color: #fff;
+}
+.category span{
+	padding: 0 10px;
+	cursor: pointer;
+}
+.play-bg{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	position: absolute;
+	z-index: 20;
+	top: 75%;
+	transform: translate(-50%, -50%);
+	left: 49%;
+}
+.box-bg{
+	margin: 0 20px;
+	cursor: pointer;
+}
+.box-bg:nth-child(2){
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	padding: 10px 30px;
+	border-radius: 10px;
+}
+.box-bg:nth-child(2) a:nth-child(2){
+	color: #181818;
+}
+.box-bg:nth-child(2) i:nth-child(1){
+	padding: 0 5px;
+	color: #181818;
+}
+.box-bg a{
+	text-decoration: none;
+	color: #fff;
+}
+.box-bg i{
+	color: #fff;
+}
+.logo-bg__mobile img{
+	height: 70px;
+}
+.similar{
+	margin-bottom: 40px;
+}
+footer{
+	display: none;
+}
+}
+@media screen and (max-width: 400px) {
+	.logo-bg__mobile img{
+		height: 50px;
+	}
+	.category span{
+		font: 18px;
+	}
+}
